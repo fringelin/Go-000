@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package helloworld;
+
+option go_package = "account/api/book;book";
+
+// The book service definition.
+service Book {
+  // query a book.
+  rpc AddBook (BookReq) returns (BookReply);
+}
+
+message BookReq {
+  int64 id = 1;
+  string name = 2;
+}
+
+message BookReply {
+
+}

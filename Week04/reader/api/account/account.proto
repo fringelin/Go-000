@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package helloworld;
+
+option go_package = "account/api/account;account";
+
+// The account service definition.
+service Account {
+  // save an account.
+  rpc AddAccount (AccountReq) returns (AccountReply);
+}
+
+message AccountReq {
+  int64 id = 1;
+  string name = 2;
+}
+
+message AccountReply {
+}
